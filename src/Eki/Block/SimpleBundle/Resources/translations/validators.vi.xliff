@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="vi" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>feedback.fullname.not_blank</source>
+                <target>Xin nhập họ và tên</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>feedback.fullname.length.max_message</source>
+                <target>Xin nhập không quá 255 ký tự</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>feedback.email.not_blank</source>
+                <target>Xin nhập địa chỉ thư điện tử của bạn</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>feedback.message.not_blank</source>
+                <target>Phản hồi, ý kiến của bạn là gì?</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>feedback.message.length.max_message</source>
+                <target>Xin nhập không quá 2000 ký tự</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

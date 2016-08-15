@@ -1,0 +1,7 @@
+sites:
+    test:
+        blocks:
+            menu_block:
+                slice_alias: cmf.block.menu
+                values:
+                    menuNode: /cms/menu/menu_testing

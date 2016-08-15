@@ -1,0 +1,41 @@
+<?php
+/**
+ * This file is part of the Ekipower eZ Website package.
+ *
+ * (c) Ekipower
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */ 
+
+namespace Eki\Block\SliceBundle\Slice\Block;
+
+use Eki\Block\SliceBundle\Slice\AbstractSliceEntry;
+
+use Symfony\Cmf\Bundle\BlockBundle\Doctrine\Phpcr\AbstractBlock;
+
+class AbstractBlockEntry extends AbstractSliceEntry implements BlockEntryInterface
+{
+	/**
+	* @inheritdoc
+	*/
+	public function set($slice, $name, $values, array $options = array())
+	{
+		if ($name === 'settings')
+		{
+			return $this->addSettings($slice, $values);
+		}
+
+		return parent::set($slice, $name, $values, $options);		
+	}
+	
+	protected function addSettings(AbstractBlock $block, array $settings)
+	{
+    	foreach($settings as $keySetting => $setting)
+    	{
+			$block->setSetting($keySetting, $setting);
+		}
+		
+		return $this;
+	}
+}

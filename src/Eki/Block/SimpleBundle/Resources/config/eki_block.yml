@@ -1,0 +1,58 @@
+eki_block:
+    blocks:
+        simple.pad:
+            type: eki.block.pad
+            templates:
+                stacked:
+                    description: Stacked Pad
+                    template: EkiSimpleBlockBundle:Block:pad_stacked.html.twig
+                    match:
+                        type: simple
+                        view: stacked
+                tabbed:
+                    description: Pad with tabbed zones
+                    template: EkiSimpleBlockBundle:Block:pad_tabbed.html.twig
+                    match:
+                        type: simple
+                        view: tabbed
+                collapse:
+                    description: Pad with toggle zones
+                    template: EkiSimpleBlockBundle:Block:pad_collapse.html.twig
+                    match:
+                        type: simple
+                        view: collapse
+        simple.zone:
+            type: eki.block.zone
+            templates:
+                horizontal:
+                    description: Horizontal Zone
+                    template: EkiSimpleBlockBundle:Block:zone_horizontal.html.twig
+                    match:
+                        type: simple
+                        view: horizontal
+                leftcol:
+                    description: Left-Column Zone
+                    template: EkiSimpleBlockBundle:Block:zone_leftcol.html.twig
+                    match:
+                        type: simple
+                        view: leftcol
+                rightcol:
+                    description: Right-Column Zone
+                    template: EkiSimpleBlockBundle:Block:zone_rightcol.html.twig
+                    match:
+                        type: simple
+                        view: rightcol
+
+        simple.action.form:
+            type: cmf.block.action
+            templates:
+                feedback:
+                    description: Contact us form template
+                    template: EkiSimpleBlockBundle:Block:feedback.html.twig
+                    match:
+                        form_type: eki_block_simple_feedback
+                receive_info:
+                    description: Receive-our-information form template
+                    template: EkiSimpleBlockBundle:Block:receive_info.html.twig
+                    match:
+                        form_type: eki_block_simple_receive_info

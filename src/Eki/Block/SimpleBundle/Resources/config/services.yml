@@ -1,0 +1,12 @@
+parameters:
+    eki_block.simple.form.type.feedback.class: Eki\Block\SimpleBundle\Form\Type\FeedbackType
+    eki_block.simple.form.type.receive_info.class: Eki\Block\SimpleBundle\Form\Type\ReceiveInfoType
+services:
+    eki_block.simple..form.type.feedback:
+        class: %eki_block.simple.form.type.feedback.class%
+        tags:
+            - { name: form.type, alias: eki_block_simple_feedback }
+    eki_block.simple..form.type.receive_info:
+        class: %eki_block.simple.form.type.receive_info.class%
+        tags:
+            - { name: form.type, alias: eki_block_simple_receive_info }

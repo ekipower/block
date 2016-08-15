@@ -1,0 +1,73 @@
+parameters:
+    eki_block.slice.factory.class: Eki\Block\SliceBundle\Factory\Factory
+
+    eki_block.slice.entry.block.pad.class: Eki\Block\SliceBundle\Slice\Block\PadBlockEntry
+    eki_block.slice.entry.block.zone.class: Eki\Block\SliceBundle\Slice\Block\ZoneBlockEntry
+    eki_block.slice.entry.block.square.class: Eki\Block\SliceBundle\Slice\Block\SquareBlockEntry
+    eki_block.slice.entry.block.item.class: Eki\Block\SliceBundle\Slice\Block\ItemBlockEntry
+    eki_block.slice.entry.block.form.class: Eki\Block\SliceBundle\Slice\Block\FormBlockEntry
+    eki_block.slice.entry.block.menu.class: Eki\Block\SliceBundle\Slice\Block\MenuBlockEntry
+    eki_block.slice.entry.block.reference.class: Eki\Block\SliceBundle\Slice\Block\ReferenceBlockEntry
+    eki_block.slice.entry.block.slideshow.class: Eki\Block\SliceBundle\Slice\Block\SlideshowBlockEntry
+    eki_block.slice.entry.block.imagine.class: Eki\Block\SliceBundle\Slice\Block\ImagineBlockEntry
+    eki_block.slice.entry.block.simple.class: Eki\Block\SliceBundle\Slice\Block\SimpleBlockEntry
+    eki_block.slice.entry.block.string.class: Eki\Block\SliceBundle\Slice\Block\StringBlockEntry
+    eki_block.slice.entry.menu.menu.class: Eki\Block\SliceBundle\Slice\Menu\MenuEntry
+    eki_block.slice.entry.menu.node.class: Eki\Block\SliceBundle\Slice\Menu\MenuNodeEntry
+    
+services:
+    eki_block.slice.factory:
+        class: %eki_block.slice.factory.class%
+        
+    eki_block.slice.entry.block.pad:
+        class: %eki_block.slice.entry.block.pad.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: eki.block.pad }
+    eki_block.slice.entry.block.zone:
+        class: %eki_block.slice.entry.block.zone.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: eki.block.zone }
+    eki_block.slice.entry.block.square:
+        class: %eki_block.slice.entry.block.square.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: eki.block.square }            
+    eki_block.slice.entry.block.item:
+        class: %eki_block.slice.entry.block.item.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: eki.block.item }
+    eki_block.slice.entry.block.form:
+        class: %eki_block.slice.entry.block.form.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: eki.block.action.form }            
+    eki_block.slice.entry.block.menu:
+        class: %eki_block.slice.entry.block.menu.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.block.menu }
+    eki_block.slice.entry.block.simple:
+        class: %eki_block.slice.entry.block.simple.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.block.simple }
+    eki_block.slice.entry.block.string:
+        class: %eki_block.slice.entry.block.string.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.block.string }
+    eki_block.slice.entry.block.slideshow:
+        class: %eki_block.slice.entry.block.slideshow.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.block.slideshow }
+    eki_block.slice.entry.block.imagine:
+        class: %eki_block.slice.entry.block.imagine.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.block.imagine }            
+    eki_block.slice.entry.block.reference:
+        class: %eki_block.slice.entry.block.reference.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.block.reference }                        
+    eki_block.slice.entry.menu.menu:
+        class: %eki_block.slice.entry.menu.menu.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.menu.menu }                        
+    eki_block.slice.entry.menu.node:
+        class: %eki_block.slice.entry.menu.node.class%
+        tags:
+            - { name: eki_block.slice_entry, alias: cmf.menu.node }                        

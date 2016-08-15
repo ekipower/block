@@ -1,0 +1,20 @@
+{% block block %}
+<div class="zone-leftcol{{ block.settings.class|default(' ') }}row">
+	{% set blocks = [] %}
+	{% for child in block.children %}
+		{% if loop.index0 < 2 %}
+			{% set blocks = blocks|merge([child]) %}
+		{% endif %}
+	{% endfor %}
+    <div class="col-md-4">
+		{% if blocks[0] %}
+		{{ sonata_block_render(blocks[0]) }}
+		{% endif %}
+	</div>
+    <div class="col-md-8">
+		{% if blocks[1] %}
+		{{ sonata_block_render(blocks[1]) }}
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

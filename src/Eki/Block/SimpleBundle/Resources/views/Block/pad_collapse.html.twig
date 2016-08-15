@@ -1,0 +1,15 @@
+{% block block %}
+<div class="{{ block.settings.class|default('container-fluid') }}">
+	{% for childBlock in block.children %}
+		{% set refId = 'collapse' ~ childBlock.id|replace({'/': '-'}) %}
+		<div class="row">
+			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#{{ refId }}" aria-expanded="false" aria-controls="{{ refId }}">
+				{{ childBlock.title|default('')|raw }}<span class="icon ion-arrow-down-b">Click</span>
+			</button>
+			<div class="collapse" id="{{ refId }}">
+				{{ sonata_block_render(childBlock) }}
+			</div>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}

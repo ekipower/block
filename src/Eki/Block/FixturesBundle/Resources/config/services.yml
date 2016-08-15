@@ -1,0 +1,10 @@
+parameters:
+    eki_block.fixtures.helper.factory.class: Eki\Block\FixturesBundle\Helper\Factory
+    
+    eki_block.fixtures.helper.slice_entry.menu.menu.class: Eki\Block\FixturesBundle\Helper\Menu\MenuEntry
+services:
+    eki_block.fixtures.helper.factory:
+        class: %eki_block.fixtures.helper.factory.class%
+    eki_block.fixtures.helper.slice_entry.menu.menu:
+        class: %eki_block.fixtures.helper.slice_entry.menu.menu.class%
+        

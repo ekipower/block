@@ -1,0 +1,19 @@
+{% block block %}
+{% if block.children|length > 0 %} 
+	{% set numZones = min(block.children|length, 12) %}
+	{% set divLength = (12 / numZones)|round %}
+	<div class="zone-horizontal{{ block.settings.class|default(' ') }}row">
+		{% for childBlock in block.children %}
+			{% if not loop.last or (12 % numZones == 0) %}
+			<div class="col-md-{{ divLength }}">
+				{{ sonata_block_render(childBlock) }}
+			</div>
+			{% else %}
+			<div class="col-md-{{ 12 - ((numZones - 1) * divLength) }}">
+				{{ sonata_block_render(childBlock) }}
+			</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% endif %}
+{% endblock %}

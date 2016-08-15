@@ -1,0 +1,19 @@
+sites:
+    test:
+        menus:
+            menu_testing:
+                slice_alias: cmf.menu.menu
+                values:
+                    label: "Main menu"
+                children:
+                    home:
+                        slice_alias: cmf.menu.node
+                        values:
+                            label:
+                                multilang: [vi_VN, en_US]
+                                vi_VN: Trang chủ
+                                en_US: Home
+                            uri:
+                                multilang: [vi_VN, en_US]
+                                vi_VN: http://ezplatform.www2.annetco.com/vi/Home-page
+                                en_US: http://ezplatform.www2.annetco.com/vi/Home-page

@@ -1,0 +1,25 @@
+sites:
+    test:
+        blocks:
+            image_testing:
+                slice_alias: eki.block.zone
+                values: []
+                children:
+                    slideshows:
+                        slice_alias: cmf.block.slideshow
+                        values:
+                            title: Main Slideshow
+                        children:
+                            image-1:
+                                slice_alias: cmf.block.imagine
+                                values:
+                                    label: Image 1
+                                    image:
+                                        fileContentFromFilesystem: image1.png
+                            image-2:
+                                slice_alias: cmf.block.imagine
+                                values:
+                                    label: Image 2
+                                    image:
+                                        fileContentFromFilesystem: image2.png
+            

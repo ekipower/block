@@ -1,0 +1,25 @@
+## messages.vi.yml
+eki_block:
+    feedback:
+        form:
+            main_title: Liên hệ
+            toggle_title: Liên hệ với chúng tôi
+            full_name:
+                label: Họ và tên
+            email:
+                label: Thư điện tử
+            subject:
+                label: Tiêu đề
+            message:
+                label: Nội dung
+            send:
+                label: Gửi
+    receive_info:
+        form:
+            main_title: Đăng ký nhận thông tin
+            toggle_title: Đăng ký nhận thông tin
+            email:
+                placeholder: Thư điện tử của bạn
+            send:
+                label: Đăng ký
+                      

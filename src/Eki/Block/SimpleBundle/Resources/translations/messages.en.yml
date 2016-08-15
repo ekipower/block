@@ -1,0 +1,25 @@
+## messages.en.yml
+eki_block:
+    feedback:
+        form:
+            main_title: Contact us
+            toggle_title: Contact us
+            full_name:
+                label: Your full name
+            email:
+                label: Your email
+            subject:
+                label: Subject
+            message:
+                label: Your message
+            send:
+                label: Send
+    receive_info:
+        form:
+            main_title: Register to receive our information
+            toggle_title: Register to receive our information
+            email:
+                placeholder: Your email
+            send:
+                label: Register
+      
